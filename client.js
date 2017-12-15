@@ -40,4 +40,5 @@ function calculateMonthlyCosts (employeeToAdd) {
 
 function removeEmployee () {
   $(this).closest('tr').remove();
+  
 }
