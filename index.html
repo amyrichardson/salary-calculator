@@ -12,16 +12,19 @@
       <h1>Salary Calculator</h1>
     </header>
     <div class="inputForm">
-      <h2>Employee Information</h2>
-      <input type="text" id="firstName" placeholder="First Name">
-      <input type="text" id="lastName" placeholder="Last Name">
-      <input type="number" id="employeeID" placeholder="ID Number">
-      <input type="text" id="jobTitle" placeholder="Job Title">
-      <span>$</span><input type="number" id="annualSalary" placeholder="Annual Salary">
-      <button type="button" id="submitButton">Submit</button>
+      <h2>Employee Form</h2>
+      <form class="" action="index.html" method="post">
 
+      <input type="text" id="firstName" placeholder="First Name">
+      <input type="text" id="lastName" placeholder="Last Name"><br />
+      <input type="number" id="employeeID" placeholder="ID Number">
+      <input type="text" id="jobTitle" placeholder="Job Title"><br />
+      <input type="number" id="annualSalary" placeholder="Annual Salary"><br />
+      <button type="button" id="submitButton">Submit</button>
+    </form>
     </div>
     <div class="employeeInfoDiv">
+      <h2>Employee Information</h2>
       <table>
         <thead>
           <tr>
@@ -29,6 +32,7 @@
             <th>Employee ID</th>
             <th>Job Title</th>
             <th>Annual Salary</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody id="employeeInfoTable">
@@ -36,8 +40,9 @@
         </tbody>
       </table>
     </div>
-    <div class="totalAnnualSalary">
-
+    <div class="monthlyCostDiv">
+      <h2>Monthly Cost</h2>
+      <h3></h3>
     </div>
 
   </body>

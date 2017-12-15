@@ -1,4 +1,40 @@
+html, body {
+  text-align: center;
+  background-color: lightgrey;
+  font-family: Helvetica, sans-serif;
+}
 
+header {
+  background-color: rgb(54, 124, 121);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 8px solid white;
+}
+.inputForm {
+  margin: auto;
+  display: block;
+  float: left;
+  width: 100%
+}
+
+.employeeInfoDiv {
+  display: block;
+  height: 20px;
+  float: left;
+  width: 50%;
+}
+
+table {
+  width: 100%;
+}
+
+.monthlyCostDiv {
+  margin: 0 auto;
+  display: block;
+  float: left;
+  width: 50%;
+}
 
 th {
   border: 1px dashed black;
