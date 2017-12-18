@@ -10,6 +10,7 @@ header {
   margin: 0;
   padding: 10px;
   border-bottom: 8px solid white;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -18,16 +19,21 @@ h3 {
 }
 
 .inputForm {
+  margin-top: 20px;
   margin: auto;
-  display: block;
-  float: left;
-  width: 100%
+  display: flex;
+  justify-content: center;
+  background-color: rgba(88, 88, 88, 0.5);
+  width: 75%;
+  padding: 30px;
 }
 
 .employeeInfoDiv {
   display: block;
-  height: 20px;
+  margin: auto;
   float: left;
+  justify-content: center;
+  height: 20px;
   width: 50%;
 }
 
@@ -50,4 +56,16 @@ th {
 td {
   border: 1px dashed black;
   padding: 10px;
+}
+
+input {
+  padding: 10px;
+}
+
+#submitButton {
+  margin-top: 20px;
+  border: 0;
+  padding: 10px 20px;
+  background-color: rgb(54, 124, 121);
+  color: white;
 }
