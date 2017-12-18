@@ -10,9 +10,9 @@ function readyNow() {
   $('input').keypress(function(e) {
     if (e.which == 13) {
       collectEmployeeInfo();
-    }
-  });
-}
+    } //end if 13
+  }); //end keypress
+} //end readyNow
 
 function collectEmployeeInfo() {
   var newEmployee = {
@@ -21,7 +21,7 @@ function collectEmployeeInfo() {
     employeeID: $('#employeeID').val(),
     jobTitle: $('#jobTitle').val(),
     annualSalary: $('#annualSalary').val()
-  };
+  }; //end newEmployee
   var $row = $('<tr>');
   $row.append('<td>' + newEmployee.firstName + ' ' + newEmployee.lastName + '</td>');
   $row.append('<td>' + newEmployee.employeeID + '</td>');
@@ -31,14 +31,13 @@ function collectEmployeeInfo() {
   $('#employeeInfoTable').append($row);
   $('input').val('');
   calculateMonthlyCosts(newEmployee);
-}
+} //end collectEmployeeInfo
 
 function calculateMonthlyCosts(employeeToAdd) {
   monthlyCost = Math.round(monthlyCost + (employeeToAdd.annualSalary / 12));
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
-}
+} //end employeeToAdd
 
 function removeEmployee() {
   $(this).closest('tr').remove();
-
-}
+} //end removeEmployee
