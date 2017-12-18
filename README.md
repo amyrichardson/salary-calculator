@@ -10,8 +10,10 @@ Web app that allows users to input employee data.
 - [x] Calculate monthly average and append that to the DOM
 - [x] Add remaining fields
 - [x] Create HTML table and append rows
-- [ ] Add a delete button
+- [x] Add a delete button
+- [ ] Update the totals
 - [ ] Styling
+- [ ] Add a class or two
 
 ## NOTES
 
