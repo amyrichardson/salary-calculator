@@ -36,6 +36,7 @@ function collectEmployeeInfo() {
 function calculateMonthlyCosts(employeeToAdd) {
   monthlyCost = Math.round(monthlyCost + (employeeToAdd.annualSalary / 12));
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
+  checkRedAlert();
 } //end employeeToAdd
 
 function removeEmployee() {
@@ -43,4 +44,13 @@ function removeEmployee() {
   monthlyCost -= Math.round(empSalary / 12);
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
   $(this).closest('tr').remove();
+  checkRedAlert();
 } //end removeEmployee
+
+function checkRedAlert () {
+  if(monthlyCost > 8000) {
+    $('.monthlyCostDiv').children('h3').toggleClass('redAlert', true);
+  } else {
+    $('.monthlyCostDiv').children('h3').toggleClass('redAlert', false);
+  } // end if else
+} //end checkRedAlert

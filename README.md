@@ -11,8 +11,9 @@ Web app that allows users to input employee data.
 - [x] Add remaining fields
 - [x] Create HTML table and append rows
 - [x] Add a delete button
-- [ ] Update the totals
-- [ ] Styling
+- [x] Update the totals
+- [x] Styling
+- [ ] Toggle CSS when average salary gets above certain point
 - [ ] Add a class or two
 
 ## NOTES
