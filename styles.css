@@ -1,7 +1,7 @@
 html, body {
   text-align: center;
   background-color: lightgrey;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 header {
@@ -11,6 +11,10 @@ header {
   padding: 10px;
   border-bottom: 8px solid white;
   margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40pt;
 }
 
 h3 {
@@ -24,17 +28,17 @@ h3 {
   display: flex;
   justify-content: center;
   background-color: rgba(88, 88, 88, 0.5);
-  width: 75%;
+  width: 80%;
   padding: 30px;
 }
 
 .employeeInfoDiv {
   display: block;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 20px;
   float: left;
   justify-content: center;
-  height: 20px;
-  width: 50%;
+  width: 60%;
 }
 
 table {
@@ -43,29 +47,51 @@ table {
 
 .monthlyCostDiv {
   margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
   display: block;
   float: left;
-  width: 50%;
+  width: 20%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 th {
-  border: 1px dashed black;
+  border: 1px solid rgb(102, 102, 102);
   padding: 10px;
+  background-color: rgba(232, 232, 232, 0.57);
 }
 
 td {
-  border: 1px dashed black;
+  border: 0;
   padding: 10px;
+  color: white;
+  background-color: rgba(88, 88, 88, 0.5);
 }
 
 input {
   padding: 10px;
+  font-size: 12pt;
 }
 
 #submitButton {
   margin-top: 20px;
   border: 0;
+  padding: 15px 40px;
+  background-color: rgb(54, 124, 121);
+  color: white;
+  font-size: 12pt;
+}
+
+#delete {
+  border: 0;
   padding: 10px 20px;
   background-color: rgb(54, 124, 121);
   color: white;
+  font-size: 10pt;
 }
