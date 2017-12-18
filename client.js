@@ -14,7 +14,7 @@ function readyNow() {
   });
 }
 
-function collectEmployeeInfo () {
+function collectEmployeeInfo() {
   var newEmployee = {
     firstName: $('#firstName').val(),
     lastName: $('#lastName').val(),
@@ -33,12 +33,12 @@ function collectEmployeeInfo () {
   calculateMonthlyCosts(newEmployee);
 }
 
-function calculateMonthlyCosts (employeeToAdd) {
-  monthlyCost = Math.round(monthlyCost + (employeeToAdd.annualSalary/12));
+function calculateMonthlyCosts(employeeToAdd) {
+  monthlyCost = Math.round(monthlyCost + (employeeToAdd.annualSalary / 12));
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
 }
 
-function removeEmployee () {
+function removeEmployee() {
   $(this).closest('tr').remove();
-  
+
 }

@@ -12,11 +12,11 @@ header {
   border-bottom: 8px solid white;
 }
 
-
 h3 {
   font-size: 56pt;
   margin-top: 0;
 }
+
 .inputForm {
   margin: auto;
   display: block;
@@ -40,7 +40,6 @@ table {
   display: block;
   float: left;
   width: 50%;
-
 }
 
 th {
