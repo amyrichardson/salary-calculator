@@ -5,11 +5,11 @@ Web app that allows users to input employee data.
 ## TODO
 
 - [x] Sourcing in files (index.html, client.js, jQuery, style.css).
-- [ ] Add a single input field and log to the console.
-- [ ] Append the input to the DOM
-- [ ] Calculate monthly average and append that to the DOM
-- [ ] Add remaining fields
-- [ ] Create HTML table and append rows
+- [x] Add a single input field and log to the console.
+- [x] Append the input to the DOM
+- [x] Calculate monthly average and append that to the DOM
+- [x] Add remaining fields
+- [x] Create HTML table and append rows
 - [ ] Add a delete button
 - [ ] Styling
 

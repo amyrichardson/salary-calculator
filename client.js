@@ -6,7 +6,7 @@ function readyNow() {
   //Event Listeners
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
   $('#submitButton').on('click', collectEmployeeInfo);
-  $('#employeeInfoTable').on('click', '#delete', removeEmployee);
+  $('#employeeInfoTable').on('click', '.delete', removeEmployee);
   $('input').keypress(function(e) {
     if (e.which == 13) {
       collectEmployeeInfo();
@@ -27,7 +27,7 @@ function collectEmployeeInfo() {
   $row.append('<td>' + newEmployee.employeeID + '</td>');
   $row.append('<td>' + newEmployee.jobTitle + '</td>');
   $row.append('<td>$' + newEmployee.annualSalary + '</td>');
-  $row.append('<td><button id="delete">Delete Employee</button</td>');
+  $row.append('<td><button class="delete">Delete Employee</button</td>');
   $('#employeeInfoTable').append($row);
   $('input').val('');
   calculateMonthlyCosts(newEmployee);
