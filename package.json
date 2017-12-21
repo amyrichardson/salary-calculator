@@ -1,0 +1,23 @@
+{
+  "name": "salary-calculator",
+  "version": "1.0.0",
+  "description": "Web app that allows users to input employee data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amyrichardson/salary-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amyrichardson/salary-calculator/issues"
+  },
+  "homepage": "https://github.com/amyrichardson/salary-calculator#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

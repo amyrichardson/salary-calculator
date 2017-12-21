@@ -4,8 +4,11 @@ $(document).ready(readyNow);
 
 function readyNow() {
   //Event Listeners
+  $('.inputForm').hide();
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
+  $('.newEmployee').on('click', showInputForm);
   $('#submitButton').on('click', collectEmployeeInfo);
+  $('#exitForm').on('click', exitForm);
   $('.container').on('click', '.delete', removeEmployee);
   $('input').keypress(function(e) {
     if (e.which == 13) {
@@ -31,6 +34,7 @@ function collectEmployeeInfo() {
   $('#employeeInfoTable').append($row);
   $('input').val('');
   calculateMonthlyCosts(newEmployee);
+  $('.inputForm').hide();
 } //end collectEmployeeInfo
 
 function calculateMonthlyCosts(employeeToAdd) {
@@ -54,3 +58,11 @@ function checkRedAlert () {
     $('.monthlyCostDiv').children('h3').toggleClass('redAlert', false);
   } // end if else
 } //end checkRedAlert
+
+function showInputForm () {
+  $('.inputForm').show();
+}
+
+function exitForm() {
+  $('.inputForm').hide();
+}

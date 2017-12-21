@@ -1,0 +1,139 @@
+html, body {
+  text-align: center;
+  background-color: #91AAB4;
+  font-family: 'Muli', sans-serif;
+}
+
+header {
+  background-color: #3E606F;
+  color: #FCFFF5;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 8px solid #FCFFF5;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+h2 {
+  color: #193441;
+}
+
+h3 {
+  font-size: 42pt;
+  margin-top: 0;
+  color: #193441;
+}
+
+.inputForm {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: fixed;
+  z-index: 999;
+  background-color: #CBDBD7;
+  border: 2px solid #91AAB4;
+  box-shadow: 0px 0px 1px   rgba(88, 88, 88, 0.9);
+}
+
+.inputForm h3 {
+  color: #3E606F;
+  font-size: 24pt;
+  margin-top: 40px;
+}
+
+.employeeInfoDiv {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  float: left;
+  justify-content: center;
+  width: 60%;
+  border: 2px solid #91AAB4;
+  background-color: #FCFFF5;
+}
+
+table {
+  width: 100%;
+  padding: 15px;
+}
+
+.monthlyCostDiv {
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
+  display: block;
+  float: left;
+  padding: 0px 50px;
+  border: 2px solid #91AAB4;
+  max-height: 185px;
+  background-color: #FCFFF5;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+th {
+  border: 1px solid #91AAB4;
+  padding: 10px;
+  background-color: #3E606F;
+  color: #FCFFF5;
+}
+
+td {
+  border: 0;
+  padding: 10px;
+  color: #FCFFF5;
+  background-color: #91AAB4;
+}
+
+input {
+  padding: 10px;
+  font-size: 12pt;
+}
+
+.newEmployee {
+  border: 0;
+  padding: 15px 40px;
+  background-color: #CBDBD7;
+  border: 1px dashed #193441;
+  color: #3E606F;
+  font-size: 12pt;
+}
+
+form button {
+  margin-top: 20px;
+  width: 20%;
+  border: 0;
+  padding: 15px 40px;
+  background-color: #3E606F;
+  color: #FCFFF5;
+  text-align: center;
+  font-size: 12pt;
+}
+
+.delete {
+  border: 0;
+  padding: 10px 20px;
+  background-color: #3E606F;
+  color: #FCFFF5;
+  font-size: 10pt;
+}
+
+.redAlert {
+  color: rgb(182, 43, 43);
+}
+
+.darkOut {
+  background-color: rgba(25, 52, 65, .8);
+}

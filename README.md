@@ -13,7 +13,7 @@ Web app that allows users to input employee data.
 - [x] Add a delete button
 - [x] Update the totals
 - [x] Styling
-- [ ] Toggle CSS when average salary gets above certain point
+- [x] Toggle CSS when average salary gets above certain point
 - [ ] Add a class or two
 
 ## NOTES
