@@ -1,4 +1,4 @@
-var monthlyCost = 0;
+let monthlyCost = 0;
 
 $(document).ready(readyNow);
 
@@ -17,34 +17,59 @@ function readyNow() {
   }); //end keypress
 } //end readyNow
 
-function collectEmployeeInfo() {
-  var newEmployee = {
+function collectEmployeeInfo() {  
+  $('.inputForm').hide();
+  
+  let newEmployee = {
     firstName: $('#firstName').val(),
     lastName: $('#lastName').val(),
     employeeID: $('#employeeID').val(),
     jobTitle: $('#jobTitle').val(),
     annualSalary: $('#annualSalary').val()
   }; //end newEmployee
-  var $row = $('<tr>');
-  $row.append('<td>' + newEmployee.firstName + ' ' + newEmployee.lastName + '</td>');
-  $row.append('<td>' + newEmployee.employeeID + '</td>');
-  $row.append('<td>' + newEmployee.jobTitle + '</td>');
-  $row.append('<td class="tdSalary">' + newEmployee.annualSalary + '</td>');
+  $('input').val('');
+  $.ajax({
+    method: 'POST',
+    url: '/employees',
+    data: {newEmployee: newEmployee},
+    success: function(response){
+      console.log('back from server with a new employee!!', response);
+      getEmployees();
+    } //end success
+  });//end ajax
+}//end collectEmployeeInfo
+
+function displayEmployeeInfo(employeeArray){
+  console.log('employee array:', employeeArray);
+  for (let index = 0; index < employeeArray.length; index++) {
+    let currentEmployee = employeeArray[index];
+    let $row = $('<tr>');
+  $row.append('<td>' + currentEmployee.firstName + ' ' + currentEmployee.lastName + '</td>');
+  $row.append('<td>' + currentEmployee.employeeID + '</td>');
+  $row.append('<td>' + currentEmployee.jobTitle + '</td>');
+  $row.append('<td class="tdSalary">' + currentEmployee.annualSalary + '</td>');
   $row.append('<td><button class="delete">Delete Employee</button</td>');
   $('#employeeInfoTable').append($row);
-  $('input').val('');
-  calculateMonthlyCosts(newEmployee);
-  $('.inputForm').hide();
-} //end collectEmployeeInfo
-
-function calculateMonthlyCosts(employeeToAdd) {
-  monthlyCost = Math.round(monthlyCost + (employeeToAdd.annualSalary / 12));
+  }
+  // calculateMonthlyCosts(newEmployee);
+} //end displayEmployeeInfo
+ 
+function calculateMonthlyCosts(employeeArray) {
+  let totalSalary = 0;
+  let employeeSalary = 0;
+  for (let index = 0; index < employeeArray.length; index++) {
+    employeeSalary = employeeArray[index].annualSalary;
+    totalSalary += employeeSalary;
+  }
+  monthlyCost = Math.round((employeeSalary / 12));
+  console.log('monthly cost:', monthlyCost);
+  
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
   checkRedAlert();
 } //end employeeToAdd
 
 function removeEmployee() {
-  var empSalary = $(this).closest('tr').find('.tdSalary').text();
+  let empSalary = $(this).closest('tr').find('.tdSalary').text();
   monthlyCost -= Math.round(empSalary / 12);
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
   $(this).closest('tr').remove();
@@ -65,4 +90,18 @@ function showInputForm () {
 
 function exitForm() {
   $('.inputForm').hide();
+}
+
+function getEmployees () {
+  //get request to server...response to be the updated employees array
+  $.ajax({
+    method: 'GET',
+    url: '/employees',
+    success: function(response){
+      console.log('back from the server with a new array!', response);
+      displayEmployeeInfo(response);
+      calculateMonthlyCosts(response);
+    }
+  });
+  
 }
