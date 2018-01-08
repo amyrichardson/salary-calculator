@@ -27,14 +27,16 @@ function collectEmployeeInfo() {
     jobTitle: $('#jobTitle').val(),
     annualSalary: $('#annualSalary').val()
   }; //end newEmployee
-  $('input').val('');
+
   $.ajax({
     method: 'POST',
     url: '/employees',
     data: {newEmployee: newEmployee},
     success: function(response){
       console.log('back from server with a new employee!!', response);
-      getEmployees();
+      getEmployees(); 
+      $('input').val('');
+      $('#employeeInfoTable').empty();
     } //end success
   });//end ajax
 }//end collectEmployeeInfo
