@@ -10,8 +10,7 @@ router.get('/', function(req, res){
 });
 
 router.post('/', function(req, res){
-    let newEmployee = req.body.newEmployee;
-    employees.push(new Employee(newEmployee.firstName, newEmployee.lastName, newEmployee.employeeID, newEmployee.jobTitle, newEmployee.annualSalary));
+    employees.push(new Employee(req.body.firstName, req.body.lastName, req.body.employeeID, req.body.jobTitle, req.body.annualSalary));
     res.sendStatus(200);
 });
 

@@ -31,7 +31,7 @@ function collectEmployeeInfo() {
   $.ajax({
     method: 'POST',
     url: '/employees',
-    data: {newEmployee: newEmployee},
+    data: newEmployee,
     success: function(response){
       console.log('back from server with a new employee!!', response);
       getEmployees(); 
@@ -63,9 +63,7 @@ function calculateMonthlyCosts(employeeArray) {
     employeeSalary = employeeArray[index].annualSalary;
     totalSalary += employeeSalary;
   }
-  monthlyCost = Math.round((employeeSalary / 12));
-  console.log('monthly cost:', monthlyCost);
-  
+  monthlyCost = Math.round((employeeSalary / 12));  
   $('.monthlyCostDiv').children('h3').text('$' + monthlyCost);
   checkRedAlert();
 } //end employeeToAdd

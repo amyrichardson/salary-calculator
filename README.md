@@ -14,7 +14,10 @@ Web app that allows users to input employee data.
 - [x] Update the totals
 - [x] Styling
 - [x] Toggle CSS when average salary gets above certain point
-- [ ] Add a class or two
+- [x] Add a class or two
+- [ ] Redo delete button -- needs to delete the employee from the server/eventually database
+- [ ] eventually add database
+- [ ] Company class -- get working after database implemented
 
 ## NOTES
 
