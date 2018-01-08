@@ -38,7 +38,7 @@ h3 {
   z-index: 999;
   background-color: #CBDBD7;
   border: 2px solid #91AAB4;
-  box-shadow: 0px 0px 1px   rgba(88, 88, 88, 0.9);
+  box-shadow: 0px 0px 1px 5000px   rgba(88, 88, 88, 0.9);
 }
 
 .inputForm h3 {
